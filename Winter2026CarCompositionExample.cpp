@@ -2,19 +2,32 @@
 //
 
 #include <iostream>
-
+#include "Wheel.h"
+#include "Car.h"
+using namespace std; 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Wheel w1(10);
+	Wheel w2(10);
+	Wheel w3(10);
+	Wheel w4(10);
+
+	Car Jeep1;
+
+	Jeep1.setWheel(w1, 0);// Front- Right
+	Jeep1.setWheel(w2, 1);// Front- Left
+	Jeep1.setWheel(w3, 2);// Rear- Right
+	Jeep1.setWheel(w4, 3);// Rear- left
+
+	Jeep1.setYear(2024);
+	Jeep1.setMake("Jeep GC");
+
+	//Write code to change the diameter of the two rear wheels to 14
+
+	Jeep1.getWheel(2).setDiameter(14);
+	Jeep1.getWheel(3).setDiameter(14);
+
+	cout<<Jeep1.getWheel(2).getDiameter()<<endl;
+	cout << Jeep1.getWheel(3).getDiameter() << endl;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
