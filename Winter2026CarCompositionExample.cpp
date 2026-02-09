@@ -14,10 +14,13 @@ int main()
 
 	Car Jeep1;
 
+	// Jeep1.setWheel(Wheel(10), 0);
 	Jeep1.setWheel(w1, 0);// Front- Right
 	Jeep1.setWheel(w2, 1);// Front- Left
 	Jeep1.setWheel(w3, 2);// Rear- Right
 	Jeep1.setWheel(w4, 3);// Rear- left
+
+	
 
 	Jeep1.setYear(2024);
 	Jeep1.setMake("Jeep GC");

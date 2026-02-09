@@ -1,5 +1,6 @@
 #include "Car.h"
-
+#include <iostream>
+using namespace std; 
 void Car::setMake(string m)
 {
 	make = m;
@@ -35,4 +36,16 @@ Wheel& Car::getWheel(int index)
 		return carWheels[index];
 
 	// TODO:  raise an exception if the index is out of range
+}
+
+void Car::printCarInfo()
+{
+	cout << getMake() << endl;
+	cout << getYear() << endl; 
+	//write code to print the diameter of all the wheels 
+	for (int i = 0; i < 4; i++)
+	{
+		cout << carWheels[i].getDiameter() << endl;
+	}
+
 }
